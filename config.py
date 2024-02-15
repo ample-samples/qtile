@@ -162,6 +162,17 @@ keys = [
 # TOGGLE FLOATING LAYOUT
     Key([mod, "shift"], "space", lazy.window.toggle_floating()),
 
+# Open Thorium
+    Key([mod], "w", lazy.spawn("thorium-browser")),
+
+# Open Neovim
+    Key([mod], "e", lazy.spawn("alacritty -e nvim")),
+
+# Open Ranger
+    Key([mod], "r", lazy.spawn("alacritty -e ranger")),
+
+# Reload Config
+    Key([mod, "control"], "r", lazy.reload_config(), desc="Reload the config"),
     ]
 
 def window_to_previous_screen(qtile, switch_group=False, switch_screen=False):
@@ -282,7 +293,7 @@ def init_widgets_list():
     widgets_list = [
                widget.GroupBox(font="FontAwesome",
                         fontsize = 16,
-                        margin_y = -1,
+                        margin_y = 3,
                         margin_x = 0,
                         padding_y = 6,
                         padding_x = 5,
@@ -480,7 +491,7 @@ widgets_screen2 = init_widgets_screen2()
 
 
 def init_screens():
-    return [Screen(top=bar.Bar(widgets=init_widgets_screen1(), size=26, opacity=0.8)),
+    return [Screen(top=bar.Bar(widgets=init_widgets_screen1(), size=26, margin=[5, 5, 0, 5], opacity=0.8)),
             Screen(top=bar.Bar(widgets=init_widgets_screen2(), size=26, opacity=0.8))]
 screens = init_screens()
 
