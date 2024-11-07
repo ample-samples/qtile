@@ -19,6 +19,21 @@ configuration {
 
 @import "colors.rasi"
 
+/*
+* onedark
+*/
+* {
+    bg-col:  #1e222a33;
+    bg-col-light: #282c3433;
+    border-col: #282c34;
+    selected-col: #282c34;
+    blue: #61afef;
+    blue-trans: #61afef33;
+    fg-col: #abb2bf;
+    fg-col2: #e06c75;
+    grey: #565c64;
+}
+
 * {
   background-color: @al;
   text-color: #eeeeee;
@@ -27,28 +42,33 @@ configuration {
 
 window {
     transparency:                   "real";
-    background-color:               #101010A9;
+    background-color:               @bg-col;
     text-color:                     #eeeeee;
 	border:							0px;
 	border-color:					@ac;
     border-radius:                  5px;
-    height:                         90%;
-	width:							96%;
+    height:                         33%;
+	width:							76%;
     location:                       northwest;
-    x-offset:                        2%;
-    y-offset:                        5%;
+    x-offset:                        12%;
+    y-offset:                        26%;
 }
 
 
 entry {
-    background-color:               #000000;
+    background-color:               @bg-col;
     text-color:                     white;
     expand:                         false;
     horizontal-align:               50%;
     placeholder:                    "Type to search";
-    margin:                         0% 0% 0% 37%;
+    margin:                         0% 0% 0% 28%;
     padding:                        1.5% 5.5%;
     blink:                          true;
+		border: 2px 2px 2px 2px;
+			border-radius:                  7px;
+		border-color:					@blue-trans;
+			margin:                         0% 28% 0% 32%;
+			padding:                        4px 9px;
 }
 
 inputbar {
@@ -58,7 +78,7 @@ inputbar {
     expand:                         false;
 	border:							0% 0% 0% 0%;
     border-radius:                  0px;
-	border-color:					@ac;
+	border-color:					@border-col-light;
     margin:                         0% 0% 0% 0%;
     padding:                        1.5%;
 }
