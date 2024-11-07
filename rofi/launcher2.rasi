@@ -47,11 +47,12 @@ window {
 	border:							0px;
 	border-color:					@ac;
     border-radius:                  5px;
-    height:                         33%;
-	width:							76%;
+    height:                         38%;
+	width:							16.5%;
     location:                       northwest;
-    x-offset:                        12%;
-    y-offset:                        26%;
+    x-offset:                        41.75%;
+    y-offset:                        16%;
+	padding:													0% 2%;
 }
 
 
@@ -59,7 +60,7 @@ entry {
     background-color:               @bg-col;
     text-color:                     white;
     expand:                         false;
-    horizontal-align:               50%;
+    horizontal-align:               0%;
     placeholder:                    "Type to search";
     margin:                         0% 0% 0% 28%;
     padding:                        1.5% 5.5%;
@@ -67,7 +68,7 @@ entry {
 		border: 2px 2px 2px 2px;
 			border-radius:                  7px;
 		border-color:					@blue-trans;
-			margin:                         0% 28% 0% 32%;
+			margin:                         0% 0% 0% 2%;
 			padding:                        4px 9px;
 }
 
@@ -86,7 +87,7 @@ inputbar {
 listview {
     background-color:               @al;
     padding:                        0px;
-    columns:                        5;
+    columns:                        1;
     lines:                          5;
     spacing:                        0%;
     cycle:                          false;
